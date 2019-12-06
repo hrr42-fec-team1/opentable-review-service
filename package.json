@@ -1,0 +1,52 @@
+{
+  "name": "opentable-res-service",
+  "version": "1.0.0",
+  "description": "Reservation and Googlemap module",
+  "author": "Jeff Whittington",
+  "license": "ISC",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "dev:react": "webpack -d --watch",
+    "db:setup": "node database/seed.js",
+    "test:faker": "node database/test.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "google-maps-react": "^2.0.2",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.7.13",
+    "react": "15.5.0",
+    "react-datepicker": "2.9.3",
+    "react-dom": "15.5.0",
+    "styled-components": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^6.0.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "babel-preset-airbnb": "^1.0.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-15": "^1.4.1",
+    "eslint": "^6.7.1",
+    "faker": "^4.1.0",
+    "jest": "^24.9.0",
+    "react-addons-test-utils": "^0.14.7",
+    "react-test-renderer": "^15.6.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrr42-fec-team1/opentable-res-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hrr42-fec-team1/opentable-res-service/issues"
+  },
+  "homepage": "https://github.com/hrr42-fec-team1/opentable-res-service#readme"
+}
