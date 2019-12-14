@@ -1,7 +1,10 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 var Review = ({review}) => (
   <div>
     <div>
-      {Review.comments}
+      {review.comments}
     </div>
   </div>
 );

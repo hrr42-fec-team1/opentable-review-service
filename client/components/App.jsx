@@ -1,7 +1,8 @@
 //  not clear why these two are necessary
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Review from './Review.jsx';
+import ReviewList from './ReviewList.jsx';
+import axios from 'axios';
 
 
 let params = (new URL(document.location)).searchParams;
@@ -20,9 +21,10 @@ class App extends React.Component {
 
   getReviews(restId) {
 		axios.get(`http://localhost:3005/review/${restId}`)
-		.then(res => {
+		.then(res => { //console.log(res);
 			if (res.data !== undefined && res.data !== {}) {
-			this.setState({reviews: reviews});
+      this.setState({reviews: res.data});
+      console.log(this.state.reviews);
     }
   })
 	}
@@ -30,7 +32,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <ReviewList reviews={this.state.reviews} />
+      <div className="reviews">
+        <ReviewList reviews={this.state.reviews} />
+      </div>
     )
   }
 }
