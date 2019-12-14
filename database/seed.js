@@ -1,4 +1,4 @@
-const Reviews = require('./Review.js');
+const Review = require('./Review.js');
 const faker = require('faker');
 const mongoose = require('mongoose');
 
@@ -8,7 +8,8 @@ var REVIEWS_TO_CREATE = 10;
 
 //  REVIEWS
 //  we're going to use random number for restaurant_id so we don't end up with same number of
-//    reservations in each restaurant
+//    reviews in each restaurant
+//  actually should create random number of reviews for EACH restaurant
 var rev = [];
 
 for (var i = 0; i < REVIEWS_TO_CREATE; i++) {
@@ -27,7 +28,7 @@ for (var i = 0; i < REVIEWS_TO_CREATE; i++) {
 //  clear any existing reservations
 Review.deleteMany({}, ()=>{});
 //  plug in array
-Review.create(res, ()=>{});
+Review.create(rev, ()=>{});
 
 mongoose.disconnect();
 

@@ -17,7 +17,7 @@ let Review = mongoose.model('Review', reviewSchema);
 
 var getAll = () => {
   return new Promise((resolve, reject) => {
-    Mapper.find()
+    Review.find()
       .exec((err, reviews) => {
         resolve(reviews);
       });
